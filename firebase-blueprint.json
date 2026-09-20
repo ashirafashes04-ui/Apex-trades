@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "User accounts and balances",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "countryCode": { "type": "string" },
+        "demoBalance": { "type": "number" },
+        "realBalance": { "type": "number" },
+        "partnerCode": { "type": "string font" },
+        "isLoggedIn": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "email"]
+    },
+    "trades": {
+      "title": "Trades",
+      "description": "User trading history and active positions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "marketId": { "type": "string" },
+        "marketName": { "type": "string" },
+        "type": { "type": "string" },
+        "direction": { "type": "string" },
+        "stake": { "type": "number" },
+        "payout": { "type": "number" },
+        "profit": { "type": "number" },
+        "status": { "type": "string" },
+        "mode": { "type": "string" },
+        "entryTime": { "type": "string" },
+        "exitTime": { "type": "string" },
+        "entryPrice": { "type": "number" },
+        "exitPrice": { "type": "number" },
+        "duration": { "type": "string" },
+        "barrier": { "type": "number" },
+        "selectedDigit": { "type": "number" },
+        "exitDigit": { "type": "number" }
+      },
+      "required": ["id", "userId", "marketId", "stake", "status"]
+    },
+    "transactions": {
+      "title": "Transactions",
+      "description": "Deposit and withdrawal records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "type": { "type": "string" },
+        "amount": { "type": "number" },
+        "method": { "type": "string" },
+        "status": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "balanceAfter": { "type": "number" },
+        "currency": { "type": "string" },
+        "destination": { "type": "string" }
+      },
+      "required": ["id", "userId", "type", "amount", "status"]
+    }
+  }
+}

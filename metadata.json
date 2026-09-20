@@ -1,0 +1,6 @@
+{
+  "name": "Synthetic Trading Terminal",
+  "description": "Mobile-first synthetic markets binary & derivatives trading terminal with live tick charts, demo simulation engine, and AI assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

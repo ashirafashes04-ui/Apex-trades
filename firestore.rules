@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow users to access their own user document
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+    
+    // Allow access to trades
+    match /trades/{tradeId} {
+      allow read, write: if true;
+    }
+    
+    // Allow access to transactions
+    match /transactions/{transactionId} {
+      allow read, write: if true;
+    }
+  }
+}
